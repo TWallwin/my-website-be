@@ -1,0 +1,24 @@
+{
+  "name": "portfolio-backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "seed": "node ./db/seeds/run-seed.js",
+    "test": "jest",
+    "start": "node listen.js",
+    "setup-dbs": "psql -f ./db/setup.sql"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.0.0",
+    "pg": "^8.7.3",
+    "pg-format": "^1.0.4",
+    "supertest": "^6.2.2"
+  },
+  "devDependencies": {
+    "jest": "^28.0.0"
+  }
+}
