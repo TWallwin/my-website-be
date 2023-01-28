@@ -2,24 +2,25 @@
   "name": "portfolio-backend",
   "version": "1.0.0",
   "description": "",
-  "main": "app.js",
+  "main": "listen.js",
   "scripts": {
     "seed": "node ./db/seeds/run-seed.js",
     "test": "jest",
     "start": "node listen.js",
     "setup-dbs": "psql -f ./db/setup.sql",
-    "seed:prod": "NODE_ENV=production DATABASE_URL=$(heroku config:get DATABASE_URL) npm run seed"
+    "seed-prod": "NODE_ENV=production npm run seed"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "b4a": "^1.6.1",
+    "cors": "2.8.5",
     "dotenv": "^16.0.0",
+    "express": "4.18.0",
     "pg": "^8.7.3",
     "pg-format": "^1.0.4",
-    "supertest": "^6.2.2",
-    "express": "4.18.0",
-    "cors": "2.8.5"
+    "supertest": "^6.2.2"
   },
   "devDependencies": {
     "jest": "^28.0.0"
